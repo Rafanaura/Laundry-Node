@@ -5,7 +5,7 @@ const moment = require('moment');
 
 module.exports = {
     get : (req, res) => {
-        const sql = "SELECT `transaksi`.*, `member`.nama_member, `user`.nama_user FROM transaksi INNER JOIN member on transaksi.id_member = member.id_member INNER JOIN user on transaksi.id_user = user.id_user;"
+        const sql = "SELECT * FROM transaksi"
         db.query(sql, (err, results) => {
             if(err){
                 throw err
